@@ -1,0 +1,40 @@
+[
+  {
+    "_id": "yr81dskjbukub5",
+    "address": {
+      "street": "4 Aderinkoye Street",
+      "city": "Akure",
+      "zipcode": "23434",
+      "country": "Nigeria",
+      "latitude": "12.543434",
+      "longitude": "65.5492942"
+    },
+    "title": "Some title",
+    "description": "some description",
+    "price": "250,000.00",
+    "rooms_info": "Duples",
+    "house_facilities": "24/7 light",
+    "photos": [],
+    "createdAt": "2020-12-30T20:03:55.120Z",
+    "updatedAt": "2020-12-30T20:03:55.120Z"
+  },
+  {
+    "_id": "yr850gkjbuqsa0",
+    "address": {
+      "street": "435 A",
+      "city": "Akure",
+      "zipcode": "23434",
+      "country": "Germany",
+      "latitude": "12.543434",
+      "longitude": "65.5492942"
+    },
+    "title": "Some title",
+    "description": "some description",
+    "price": "250,000.00",
+    "rooms_info": "Duples",
+    "house_facilities": "24/7 light",
+    "photos": [],
+    "createdAt": "2020-12-30T20:08:32.423Z",
+    "updatedAt": "2020-12-30T20:08:32.423Z"
+  }
+]
