@@ -2,10 +2,13 @@ const express = require("express");
 const { check, validationResult, checkSchema } = require("express-validator");
 const uniqid = require("uniqid");
 const multer = require("multer");
+const moment = require("moment");
 
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
 const cloudinary = require("../../library/cloudinary");
 const { getPlaces, writePlaces } = require("../../library/fsUtils");
+
+moment().format();
 
 const addressValidation = [
   check("street").exists().withMessage("Street is required"),
@@ -47,6 +50,7 @@ const cloudinaryMulter = multer({ storage: storage });
 placesRouter.get("/", async (req, res, next) => {
   try {
     const places = await getPlaces();
+    console.log(moment());
 
     if (req.query && req.query.title) {
       const filteredPlace = places.filter(
@@ -117,45 +121,41 @@ placesRouter.post("/", placesValidation, async (req, res, next) => {
   }
 });
 
-placesRouter.put(
-  "/:id",
-  [placesValidation, addressValidation],
-  async (req, res, next) => {
-    try {
-      const validationErrors = validationResult(req);
+placesRouter.put("/:id", placesValidation, async (req, res, next) => {
+  try {
+    const validationErrors = validationResult(req);
 
-      if (!validationErrors.isEmpty()) {
-        const error = new Error();
-        error.httpStatusCode = 400;
-        error.message = validationErrors;
-        next(error);
-      } else {
-        const places = await getPlaces();
-
-        const placeIndex = places.findIndex(
-          (place) => place._id === req.params._id
-        );
-
-        if (placeIndex !== -1) {
-          // place found
-          const updatedPlaces = [
-            ...places.slice(0, placeIndex),
-            { ...places[placeIndex], ...req.body },
-            ...media.slice(placeIndex + 1),
-          ];
-          await writePlaces(updatedPlaces);
-          res.send(updatedPlaces);
-        } else {
-          const err = new Error();
-          err.httpStatusCode = 404;
-          next(err);
-        }
-      }
-    } catch (error) {
-      console.log(error);
+    if (!validationErrors.isEmpty()) {
+      const error = new Error();
+      error.httpStatusCode = 400;
+      error.message = validationErrors;
       next(error);
+    } else {
+      const places = await getPlaces();
+
+      const placeIndex = places.findIndex(
+        (place) => place._id === req.params.id
+      );
+
+      if (placeIndex !== -1) {
+        // place found
+        const updatedPlaces = [
+          ...places.slice(0, placeIndex),
+          { ...places[placeIndex], ...req.body },
+          ...places.slice(placeIndex + 1),
+        ];
+        await writePlaces(updatedPlaces);
+        res.send(updatedPlaces);
+      } else {
+        const err = new Error();
+        err.httpStatusCode = 404;
+        next(err);
+      }
     }
+  } catch (error) {
+    console.log(error);
+    next(error);
   }
-);
+});
 
 module.exports = placesRouter;
