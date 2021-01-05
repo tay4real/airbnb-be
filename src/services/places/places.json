@@ -1,1 +1,66 @@
-[{"_id":"yr81dskjbukub5","address":{"street":"4 Aderinkoye Street","city":"Akure","zipcode":"23434","country":"Nigeria","latitude":"12.543434","longitude":"65.5492942"},"title":"Some title","description":"some description","price":"250,000.00","rooms_info":"Duples","house_facilities":"24/7 light","photos":[],"createdAt":"2020-12-30T20:03:55.120Z","updatedAt":"2020-12-30T20:03:55.120Z"},{"_id":"yr850gkjbuqsa0","address":{"street":"4 Aderinkoye","city":"Akure","zipcode":"23434","country":"Germany","latitude":"12.543434","longitude":"65.5492942"},"title":"Some title","description":"some description","price":"250,000.00","rooms_info":"Duples","house_facilities":"24/7 light","photos":[],"createdAt":"2020-12-30T20:08:32.423Z","updatedAt":"2020-12-30T20:08:32.423Z"}]
+[
+  {
+    "id": "yr81rokjegxuqd",
+    "title": "Some title",
+    "description": "some description",
+    "price": "250,000.00",
+    "address": {
+      "street": "dss",
+      "city": "gdfdfdf",
+      "zipcode": "dfdfs",
+      "country": "sdsff",
+      "latitude": "sdfc",
+      "longitude": "sdffdfdf"
+    },
+    "rooms_info": {
+      "check_in": "sdfds",
+      "check-out": "dsfdfsd",
+      "entire_home": "You’ll have the serviced apartment to yourself.",
+      "amenities": "dsfssdfsd",
+      "cancellation_policy": "sdffds",
+      "rules": "dffd"
+    },
+    "facilities": "24/7 light",
+    "imageURLs": [
+      "https://res.cloudinary.com/tay4real/image/upload/v1609517125/strive-school/airbnb/ltqks3pczcbuxv7cpupv.jpg",
+      "https://res.cloudinary.com/tay4real/image/upload/v1609517125/strive-school/airbnb/uqzyhnathyr6d3pmguuv.png",
+      "https://res.cloudinary.com/tay4real/image/upload/v1609517126/strive-school/airbnb/tiwd14m7islrdc7tx4cn.png"
+    ],
+    "bookings": [],
+    "reviews": [],
+    "createdAt": "2021-01-01T16:05:26.101Z",
+    "updatedAt": "2021-01-01T16:05:26.101Z"
+  },
+  {
+    "id": "yr88pgkjk2hpfw",
+    "title": "Some title",
+    "description": "some description",
+    "price": "250,000.00",
+    "address": {
+      "street": "dss",
+      "city": "gdfdfdf",
+      "zipcode": "dfdfs",
+      "country": "sdsff",
+      "latitude": "sdfc",
+      "longitude": "sdffdfdf"
+    },
+    "rooms_info": {
+      "check_in": "sdfds",
+      "check-out": "dsfdfsd",
+      "entire_home": "You’ll have the serviced apartment to yourself.",
+      "amenities": "dsfssdfsd",
+      "cancellation_policy": "sdffds",
+      "rules": "dffd"
+    },
+    "facilities": "24/7 light",
+    "imageURLs": [
+      "https://res.cloudinary.com/tay4real/image/upload/v1609855653/strive-school/airbnb/yynac9hdgi6flynio3w2.jpg",
+      "https://res.cloudinary.com/tay4real/image/upload/v1609855654/strive-school/airbnb/ufgoostlyg8wwpy5xm7d.png",
+      "https://res.cloudinary.com/tay4real/image/upload/v1609855655/strive-school/airbnb/dpecp7muh0exm5zioga2.png"
+    ],
+    "bookings": [],
+    "reviews": [],
+    "createdAt": "2021-01-05T14:07:35.179Z",
+    "updatedAt": "2021-01-05T14:07:35.179Z"
+  }
+]
